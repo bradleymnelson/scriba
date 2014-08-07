@@ -10,8 +10,10 @@ class TranscriptionsController < ApplicationController
 
   # GET /transcriptions/1
   # GET /transcriptions/1.json
-  def show
-  end
+def show
+  @comments = @transcription.comments.all
+  @comment = @transcription.comments.build
+end
 
   # GET /transcriptions/new
   def new
